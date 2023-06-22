@@ -28,20 +28,161 @@
       href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Oxygen:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/5cfafcc03b.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <div class="d-flex">
-        <i class="fa-solid fa-apple-whole"></i>
-        <h1>Hello world</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati,
-          autem deserunt fugit iure velit eveniet a maxime optio similique in
-          eligendi, id distinctio nihil quam eius dicta quibusdam dolorem.
-        </p>
-    </div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand m-2" href="#"
+          ><strong>
+            <i class="fa-solid fa-compass"></i>
+            Karina Kvych</strong
+          >
+          / <em>Junior Web Developer</em></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav m-3">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >About me <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cv</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid d-flex flex-column">
+      <div class="row w-100 flex-grow-1">
+        <div
+          class="col-5 name h-100 d-flex justify-content-center align-items-center"
+        >
+          <div class="my_info">
+            <div class="info_title">
+              <i
+                class="fa-solid fa-laptop-code fa-lg"
+                style="color: #465877"
+              ></i>
+              <br />
+              <h1>Karina Kvych</h1>
+            </div>
+            <div class="info_content">
+              <strong>Junior Web Developer</strong>
+              <div class="line"></div>
+              <strong>Programming languages:</strong>
+              <ul class="text-lg-start">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Python</li>
+                <li>SQL</li>
+              </ul>
+            </div>
+            <div class="links">
+              <a
+                href="https://www.linkedin.com/in/karina-kvych-036958216/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/karin0chka"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-7 info h-100 d-flex justify-content-center align-items-center"
+        >
+          <section class="about">
+            <div class="say_hello">
+              <h1><strong>HELLO</strong>
+            </h1>
+              <h2>Here's who I am & what I do</h2>
+            </div>
+            <br />
+            <div class="download">
+              <button class="click_cv">CV</button>
+              <button class="click_pr">PROJECTS</button>
+            </div>
+            <div class="description">
+              As a student and <strong>Junior Web developer</strong>,I have a
+              solid foundation in both
+              <strong>front-end and back-end development</strong>.
+              <br />
+              I amproficient in programming languages ​​such as
+              <strong>Python, SQL, HTML, CSS, and JavaScript</strong>.
+              <br />
+              Although I am currently finishing my studies, I am continually
+              improving my skills and knowledge in this area. I also hold an
+              <strong>Azure Fundamentals certification</strong>, demonstrating
+              my mastery of cloud computing. I have a strong desire to learn and
+              grow and want to apply my development skills to tackle new
+              challenges in the software development industry.
+              <br />
+              <h3 class="m-3">
+                <strong class="text-primary">Email me: </strong
+                >karina.kvych@gmail.com
+              </h3>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <a
+              href="https://www.linkedin.com/in/karina-kvych-036958216/"
+              target="_blank"
+              ><i
+                class="fa-brands fa-linkedin fa-2xl"
+                style="color: #ecd44b"
+              ></i
+            ></a>
+          </div>
+          <div class="col-4">
+            <i class="fa-solid fa-list-check fa-2xl" style="color: #0d111c"></i>
+          </div>
+          <div class="col-4">
+            <a href="https://github.com/karin0chka" target="_blank"
+              ><i class="fa-brands fa-github fa-2xl" style="color: #527fcb"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
