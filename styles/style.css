@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(210, 180, 180);
+}
+h1{
+    color:wheat;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+p{
+    font-family: 'Oxygen', sans-serif; ;
+}
