@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
     <link
@@ -14,7 +24,8 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <title>CV Karina Kvych</title>
+    <title>About Karina Kvych</title>
+    <link rel="icon" type="image/x-icon" href="img/download.jpg">
     <link href="styles/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +53,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <a class="navbar-brand m-2" href="#"
+        <a class="navbar-brand" href="index.html"
           ><strong>
             <i class="fa-solid fa-compass"></i>
             Karina Kvych</strong
@@ -67,12 +78,12 @@
         >
           <ul class="navbar-nav m-3">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="index.html"
                 >About me <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cv</a>
+              <a class="nav-link" href="cv.html">Cv</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Projects</a>
@@ -84,10 +95,10 @@
         </div>
       </nav>
     </header>
-    <main class="container-fluid d-flex flex-column">
+    <main class="container-fluid d-flex flex-column overflow-y-auto">
       <div class="row w-100 flex-grow-1">
         <div
-          class="col-5 name h-100 d-flex justify-content-center align-items-center"
+          class="col-12 col-md-5 name h-100 d-flex justify-content-center align-items-center"
         >
           <div class="my_info">
             <div class="info_title">
@@ -123,17 +134,23 @@
           </div>
         </div>
         <div
-          class="col-7 info h-100 d-flex justify-content-center align-items-center"
+          class="col-12 col-md-7 info h-100 d-flex justify-content-center align-items-center"
         >
           <section class="about">
             <div class="say_hello">
-              <h1><strong>HELLO</strong>
-            </h1>
+              <h1><strong>HELLO</strong></h1>
               <h2>Here's who I am & what I do</h2>
             </div>
             <br />
             <div class="download">
-              <button class="click_cv">CV</button>
+              <button class="click_cv">
+                <a
+                  href="cv.html"
+                  target="_blank"
+                  class="text-decoration-none text-light"
+                  >CV</a
+                >
+              </button>
               <button class="click_pr">PROJECTS</button>
             </div>
             <div class="description">
@@ -145,15 +162,28 @@
               <strong>Python, SQL, HTML, CSS, and JavaScript</strong>.
               <br />
               Although I am currently finishing my studies, I am continually
-              improving my skills and knowledge in this area. I also hold an
-              <strong>Azure Fundamentals certification</strong>, demonstrating
-              my mastery of cloud computing. I have a strong desire to learn and
-              grow and want to apply my development skills to tackle new
-              challenges in the software development industry.
+              improving my skills and knowledge in this area. As part of my
+              ongoing learning journey, I'm currently diving deep into <strong>Django</strong>, a
+              powerful web framework known for its versatility and efficiency.
+              Additionally, I've recently embarked on the exciting path of
+              learning <strong>React</strong>, a popular JavaScript library used for building
+              dynamic user interfaces.
+              <br/>
+              I also hold an <strong>Azure Fundamentals certification</strong>, demonstrating
+              my mastery of cloud computing.
+              <br />
+              I have a strong desire to learn and grow and want to apply my
+              development skills to tackle new challenges in the software
+              development industry.
               <br />
               <h3 class="m-3">
-                <strong class="text-primary">Email me: </strong
-                >karina.kvych@gmail.com
+                <a
+                  href="mailto:karina.kvych@gmail.com"
+                  class="text-info text-decoration-none"
+                >
+                  <i class="fa-regular fa-paper-plane fa-2xl"></i>
+                  karina.kvych@gmail.com</a
+                >
               </h3>
             </div>
           </section>
