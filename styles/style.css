@@ -27,7 +27,7 @@ h1 h2 {
   font-family: "Merriweather", serif;
 }
 .name {
-  background-color: #dfd1c3;
+  background-color: rgb(236, 229, 229);
   height: 100%;
 }
 
@@ -95,6 +95,14 @@ h1 h2 {
   border: 1px solid grey;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
+.click_cv:hover {
+  border: 1px solid rgb(15, 15, 87);
+  background-color: rgb(223, 223, 231);
+  color: rgb(15, 15, 87);
+}
+.click_cv:hover a{
+    color: rgb(15, 15, 87) !important;
+}
 .click_pr {
   padding: 10px 40px;
   border-radius: 30px;
@@ -103,6 +111,10 @@ h1 h2 {
   background-color: rgb(223, 223, 231);
   border: 1px solid grey;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.click_pr:hover {
+  background-color: rgb(15, 15, 87);
+  color: white;
 }
 .description {
   margin: 15px;
@@ -113,11 +125,10 @@ h1 h2 {
   text-decoration: none;
 }
 
-
-@media screen and (max-width: 776px){
- .my_info{
-    position:static ;
- }
+@media screen and (max-width: 776px) {
+  .my_info {
+    position: static;
+  }
   .about {
     position: relative;
     text-align: center;
