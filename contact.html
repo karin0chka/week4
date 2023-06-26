@@ -51,6 +51,7 @@
     ></script>
   </head>
   <body>
+    
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
         <a class="navbar-brand" href="index.html"
@@ -100,19 +101,21 @@
         <div class="content">
           <div class="form">
             <h1 class="topic-text">Let's get in touch</h1>
-            <form class="m-4">
+            <form class="m-4" id="form">
               <div class="m-3">
-                <input type="text" class="form-control" placeholder="Name" />
+                <input type="text" class="form-control" placeholder="Name" id="name" required/>
               </div>
               <div class="m-3">
                 <input
                   type="email"
                   class="form-control"
                   placeholder="Email address"
+                  id="emailAddress"
+                  required
                 />
               </div>
               <div class="m-3">
-                <textarea class="form-control" rows="4"></textarea>
+                <textarea class="form-control" rows="4" required id="text"></textarea>
               </div>
               <button type="submit">
                 <i class="fa-regular fa-paper-plane"></i>
@@ -146,5 +149,32 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.getElementById("form").addEventListener("submit", async function(e){
+        e.preventDefault()
+        const name = document.getElementById('name').value
+        const emailAddress = document.getElementById('emailAddress').value
+        const text = document.getElementById('text').value
+        const botToken = "5685011090:AAF3_iLIlZLWcdHf0qrtkHons4MfbIO0EtY";
+        const channelChatId = "-970116995";
+        const message = `Name: ${name};\n Email: ${emailAddress}; \n Massage: ${text}`;
+        try {
+          const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+          const payload = {
+            chat_id: channelChatId,
+            text: message,
+          };
+
+          const response = await fetch(url, {
+            method:'POST',
+            headers:{'content-type':'application/json'},
+            body:JSON.stringify(payload)
+          });
+          console.log("Message sent successfully:", response.data);
+        } catch (error) {
+          console.error("Error sending message:", error);
+        }
+      })
+    </script>
   </body>
 </html>
