@@ -104,7 +104,8 @@ h1 h2 {
     color: rgb(15, 15, 87) !important;
 }
 .click_pr {
-  padding: 10px 40px;
+  text-decoration: none;
+  padding: 15px 40px;
   border-radius: 30px;
   font-family: "Bebas Neue", sans-serif;
   color: rgb(15, 15, 87);

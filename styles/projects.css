@@ -1,0 +1,41 @@
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 1fr 50px;
+}
+header {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(223, 216, 216);
+  color: white;
+  text-align: center;
+}
+main {
+  background-color: rgb(236, 229, 229);
+}
+.project {
+  margin: 10px;
+  padding: 15px;  
+  text-align: center;
+  background-color: white;
+  font-family: "Merriweather", serif;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.project li {
+  list-style-type: none;
+}
+.container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr;
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Karina Kvych</title>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -24,8 +25,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
-    <title>About Karina Kvych</title>
-    <link rel="icon" type="image/x-icon" href="img/download.jpg">
+    <link rel="icon" type="image/x-icon" href="img/download.jpg" />
     <link href="styles/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -78,15 +78,13 @@
         >
           <ul class="navbar-nav m-3">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html"
-                >About me <span class="sr-only">(current)</span></a
-              >
+              <a class="nav-link" href="index.html">About me</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cv.html">Cv</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="projects.html">Projects</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
@@ -143,15 +141,9 @@
             </div>
             <br />
             <div class="download">
-              <button class="click_cv">
-                <a
-                  href="cv.html"
-                  target="_blank"
-                  class="text-decoration-none text-light"
-                  >CV</a
-                >
-              </button>
-              <button class="click_pr">PROJECTS</button>
+              <button class="click_cv" id="downloadCv">CV</button>
+
+              <a class="click_pr" href="projects.html" target="_blank"> PROJECTS </a>
             </div>
             <div class="description">
               As a student and <strong>Junior Web developer</strong>,I have a
@@ -163,14 +155,14 @@
               <br />
               Although I am currently finishing my studies, I am continually
               improving my skills and knowledge in this area. As part of my
-              ongoing learning journey, I'm currently diving deep into <strong>Django</strong>, a
-              powerful web framework known for its versatility and efficiency.
-              Additionally, I've recently embarked on the exciting path of
-              learning <strong>React</strong>, a popular JavaScript library used for building
-              dynamic user interfaces.
-              <br/>
-              I also hold an <strong>Azure Fundamentals certification</strong>, demonstrating
-              my mastery of cloud computing.
+              ongoing learning journey, I'm currently diving deep into
+              <strong>Django</strong>, a powerful web framework known for its
+              versatility and efficiency. Additionally, I've recently embarked
+              on the exciting path of learning <strong>React</strong>, a popular
+              JavaScript library used for building dynamic user interfaces.
+              <br />
+              I also hold an <strong>Azure Fundamentals certification</strong>,
+              demonstrating my mastery of cloud computing.
               <br />
               I have a strong desire to learn and grow and want to apply my
               development skills to tackle new challenges in the software
@@ -214,5 +206,15 @@
         </div>
       </div>
     </footer>
+    <script>
+      document
+        .getElementById("downloadCv")
+        .addEventListener("click", function () {
+          const link = document.createElement("a");
+          link.href = "cv.pdf";
+          link.download = "Karina Kvych CV.pdf";
+          link.dispatchEvent(new MouseEvent("click"));
+        });
+    </script>
   </body>
 </html>
