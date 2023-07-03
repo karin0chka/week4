@@ -23,6 +23,7 @@ footer {
   text-align: center;
 }
 
+
 h1 h2 {
   font-family: "Merriweather", serif;
 }
@@ -39,15 +40,25 @@ h1 h2 {
 .links a {
   padding: 15px;
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info_wrapper{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap:25px;
+  overflow: auto;
+}
 .my_info {
   display: flex;
   flex-direction: column;
-  position: relative;
-  left: 45%;
+  margin: 10px;
   background-color: white;
   border-radius: 50px;
-  width: 100%;
-  max-width: 400px;
+  width: 400px !important;
   height: 450px;
   box-shadow: 0px 0px 15px rgb(103, 101, 101);
   text-align: center;
@@ -76,12 +87,6 @@ h1 h2 {
   font-family: "Oxygen", sans-serif !important;
 }
 .about {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  left: 0%;
-  width: 100%;
-  max-width: 750px;
   height: 450px;
   text-align: left;
 }
@@ -126,12 +131,10 @@ h1 h2 {
   text-decoration: none;
 }
 
-@media screen and (max-width: 776px) {
-  .my_info {
-    position: static;
-  }
-  .about {
-    position: relative;
-    text-align: center;
+@media (max-width: 768px) {
+  .info_wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
   }
 }

@@ -22,20 +22,76 @@ footer {
 }
 main {
   background-color: rgb(236, 229, 229);
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
 }
-.project {
+.project_wrapper {
+  display: grid;
+  grid-template-rows: 700px 700px;
+  margin: 20px;
+  padding: 20px;
+}
+.project_weather {
+  width: 90%;
+  height: 85%;
   margin: 10px;
-  padding: 15px;  
+  padding: 15px;
   text-align: center;
   background-color: white;
   font-family: "Merriweather", serif;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
-.project li {
+.project_weather a {
+  text-decoration: none;
+  color: rgb(50, 144, 144);
+}
+.project_wrapper li {
+  display: inline;
   list-style-type: none;
+  font-size: 45px;
+  padding: 5px;
 }
-.container{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  grid-template-rows:1fr;
+.media_q{
+  display: none;
+}
+.project_booking {
+  width: 90%;
+  height: 90%;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+  font-family: "Merriweather", serif;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+.project_booking a {
+  text-decoration: none;
+  color: rgb(41, 154, 154);
+}
+
+.weather_img {
+  width: 100%;
+}
+
+.booking_img {
+  height: 70%;
+}
+@media screen and (max-width: 768px) {
+  .weather_img {
+    display: none;
+  }
+  .booking_img {
+    display: none;
+  }
+  .for_full_scr{
+    display: none;
+  }
+  .media_q{
+    display: block;
+  }
+
+  
 }

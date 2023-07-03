@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -95,81 +99,100 @@
     </header>
     <main>
       <div class="container">
-        <section >
-          <div class="col-6">
-            <section class="project">
-              <p>Techniques that are used:</p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>JSON</li>
-                <li>Visual Studio Code</li>
-                <li>OpenWeatherMap API</li>
-                <li>GitHub</li>
-                <li>Netlify</li>
-              </ul>
-              <p>
-                TempSense is a dynamic web application that utilizes HTML, CSS,
-                and JavaScript along with the OpenWeatherMap API to provide
-                users with real-time weather information. It offers a
-                user-friendly interface where users can enter a location or
-                enable location detection to access up-to-date weather
-                conditions such as temperature, humidity, and wind speed. The
-                app is hosted on GitHub for efficient version control and
-                deployed on Netlify for seamless updates.
-              </p>
-              <a href="https://tempsense.netlify.app/" target="_blank"
-                >Check the weather
-              </a>
-            </section>
-          </div>
-          <div class="col-6">
-            <img
-              src="img/weather.png"
-              width="100%"
-              alt="Weather App"
-              class="rounded shadow-1"
-            />
-          </div>
-          <div class="col-6">
-            <img
-              src="img/booking.png"
-              height="70%"
-              alt="Booking"
-              class="rounded booking_img"
-            />
-          </div>
-          <div class="col-6">
-            <section class="project">
-              <p>Techniques that are used:</p>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Django</li>
-                <li>PostgreSQL</li>
-              </ul>
-              <p>
-                BookWith,me - booking project is a web application built using Django and
-                PostgreSQL. It offers users the ability to book tickets for
-                various events and experiences through an intuitive user
-                interface. Leveraging Django's powerful framework, the
-                application allows users to browse available events, select
-                their desired ticket quantities, and proceed with the booking
-                process. The use of PostgreSQL as the database management system
-                ensures efficient storage and retrieval of ticket and booking
-                information. With its seamless integration of Django's
-                authentication and authorization features, the booking project
-                provides a secure and personalized experience for users,
-                allowing them to view and manage their bookings. Overall, the
-                project provides a user-friendly and robust solution for event
-                ticket booking, empowering users to conveniently reserve their
-                spots for exciting experiences
-              </p>
-              <a href="http://18.133.30.69/">Book ticket</a>
-            </section>
-          </div>
+        <section class="project_wrapper">
+          <section class="project_weather">
+            <div class="row">
+              <div class="col-md-5">
+                <strong class="mt-lg-5">Techniques that are used:</strong>
+                <br />
+                <ul>
+                  <li><i class="devicon-html5-plain colored"></i></li>
+                  <li><i class="devicon-css3-plain colored"></i></li>
+                  <li><i class="devicon-javascript-plain colored"></i></li>
+                  <li><i class="devicon-visualstudio-plain colored"></i></li>
+                  <li>
+                    <i class="devicon-github-original-wordmark colored"></i>
+                  </li>
+                </ul>
+                <a href="https://tempsense.netlify.app/" target="_blank"
+                  >Check the weather
+                </a>
+                <p class="for_full_scr">
+                  TempSense is a dynamic web application that utilizes HTML,
+                  CSS, and JavaScript along with the OpenWeatherMap API to
+                  provide users with real-time weather information. It offers a
+                  user-friendly interface where users can enter a location or
+                  enable location detection to access up-to-date weather
+                  conditions such as temperature, humidity, and wind speed. The
+                  app is hosted on GitHub for efficient version control and
+                  deployed on Netlify for seamless updates.
+                </p>
+                <p class="media_q">
+                  TempSense is a dynamic web application that utilizes HTML,
+                  CSS, and JavaScript along with the OpenWeatherMap API to
+                  provide users with real-time weather information. It offers a
+                  user-friendly interface where users can enter a location or
+                  enable location detection to access up-to-date weather
+                  conditions such as temperature, humidity, and wind speed.
+                </p>
+              </div>
+              <div class="col-7">
+                <img
+                  src="img/weather.png"
+                  width="100%"
+                  alt="Weather App"
+                  class="rounded shadow-1 weather_img"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="project_booking">
+            <div class="row">
+              <div class="col-6">
+                <img
+                  src="img/booking.png"
+                  alt="Booking"
+                  class="rounded booking_img"
+                />
+              </div>
+              <div class="col-6">
+                <strong>Techniques that are used:</strong>
+                <ul>
+                  <li><i class="devicon-html5-plain colored"></i></li>
+                  <li><i class="devicon-css3-plain colored"></i></li>
+                  <li><i class="devicon-javascript-plain colored"></i></li>
+                  <li><i class="devicon-django-plain colored"></i></li>
+                  <li><i class="devicon-postgresql-plain colored"></i></li>
+                </ul>
+                <a href="http://18.133.30.69/" target="_blank">Book ticket</a>
+                <p class="for_full_scr">
+                  BookWith,me - booking project is a web application built using
+                  Django and PostgreSQL. It offers users the ability to book
+                  tickets for various events and experiences through an
+                  intuitive user interface. Leveraging Django's powerful
+                  framework, the application allows users to browse available
+                  events, select their desired ticket quantities, and proceed
+                  with the booking process. The use of PostgreSQL as the
+                  database management system ensures efficient storage and
+                  retrieval of ticket and booking information. With its seamless
+                  integration of Django's authentication and authorization
+                  features, the booking project provides a secure and
+                  personalized experience for users, allowing them to view and
+                  manage their bookings.
+                </p>
+                <p class="media_q">
+                  BookWith,me - booking project is a web application built using
+                  Django and PostgreSQL. It offers users the ability to book
+                  tickets for various events and experiences through an
+                  intuitive user interface. Leveraging Django's powerful
+                  framework, the application allows users to browse available
+                  events, select their desired ticket quantities, and proceed
+                  with the booking process.
+                </p>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
     </main>
