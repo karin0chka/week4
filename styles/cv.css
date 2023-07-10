@@ -53,7 +53,7 @@ p {
 .additional_info ul {
   list-style-type: none;
 }
-@media  (max-width: 768px) {
+@media (max-width: 600px) {
   .education.row{
     display:flex;
     flex-direction: column;
