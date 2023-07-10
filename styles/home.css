@@ -18,9 +18,9 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: rgb(223, 216, 216);
-  color: white;
   text-align: center;
+  background-color: rgb(223, 216, 216);
+
 }
 
 
@@ -40,7 +40,7 @@ h1 h2 {
 .links a {
   padding: 15px;
 }
-.container,.center_info{
+main,.center_info{
   display: flex;
   justify-content: center;
   align-items: center;
