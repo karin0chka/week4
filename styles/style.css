@@ -40,6 +40,11 @@ h1 h2 {
 .links a {
   padding: 15px;
 }
+.container,.center_info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .info_wrapper{
   display: grid;
@@ -126,7 +131,7 @@ h1 h2 {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .info_wrapper {
     grid-template-columns: 1fr;
     justify-items: center;
