@@ -58,7 +58,8 @@
             <i class="fa-solid fa-compass"></i>
             Karina Kvych</strong
           >
-          / <em>Junior Web Developer</em></a>
+          / <em>Junior Web Developer</em></a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -184,6 +185,17 @@
             console.error("Error sending message:", error);
           }
         });
+
+
+
+        document.getElementById("form"),addEventListener("submit", e =>{
+          if (event.submitter === document.getElementById('form').querySelector('button[type="submit"]')) {
+             alert('Thank you! I will be in touch.');
+             document.getElementById('name').value = '';
+              document.getElementById('emailAddress').value = '';
+              document.getElementById('text').value = '';
+            }
+        })
     </script>
   </body>
 </html>
