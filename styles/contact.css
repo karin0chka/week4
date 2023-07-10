@@ -28,7 +28,7 @@ footer {
 main .container {
   width: 100%;
   background-color: #fff;
-  padding: 20px 60px 40px 40px;
+  padding: 20px 40px 40px 40px;
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -62,4 +62,13 @@ main .container {
 .content button:hover {
   background-color: rgb(15, 15, 87);
   color: white;
+}
+@media (max-width: 600px) {
+  main .container{
+    width: 95%;
+    
+  }
+  .form{
+    width: 100%;
+  }
 }

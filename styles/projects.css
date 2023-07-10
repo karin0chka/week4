@@ -90,7 +90,7 @@ main {
     display: none;
   }
   .media_q{
-    display: block;
+    display: inline-block;
   }
 
   

@@ -41,11 +41,6 @@ h1 h2 {
   padding: 15px;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .info_wrapper{
   display: grid;
   grid-template-columns: auto auto;
@@ -136,5 +131,18 @@ h1 h2 {
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
+  }
+  .my_info{
+    max-width: 300px;
+
+  }
+  .info_content li{
+    text-align: left;
+  }
+  .about{
+    text-align: center;
+  }
+  .description a {
+    margin: 5px;
   }
 }

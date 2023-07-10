@@ -37,8 +37,7 @@ h2,
 h3 {
   font-family: "Merriweather", serif;
 }
-h5 {
-}
+
 .line_cv {
   border: 1px solid gray;
   width: 90%;
@@ -53,4 +52,18 @@ p {
 }
 .additional_info ul {
   list-style-type: none;
+}
+@media  (max-width: 768px) {
+  .education.row{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .experiens.row{
+    display:flex;
+    flex-direction: column;
+  }
+  .skills_list li{
+    margin: 5px;
+  }
 }
