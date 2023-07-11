@@ -48,7 +48,7 @@ main .container {
 .content textarea {
   background-color: rgb(236, 229, 229);
 }
-.content button {
+.subButton {
   display: block;
   margin: 0 auto;
   padding: 10px 40px;
@@ -59,9 +59,41 @@ main .container {
   border: 1px solid grey;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
 }
-.content button:hover {
+.subButton:hover {
   background-color: rgb(15, 15, 87);
   color: white;
+}
+.loader {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 10px solid rgb(215, 208, 208);
+  border-top: 10px solid rgb(88, 216, 88);
+  text-indent: -9999px; 
+  width: 60px;
+  height: 60px;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.success{
+  display: block;
+  margin: 0 auto;
+  background-image: url("../img/done.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  text-indent: -9999px; 
+  overflow: hidden;
+  border: none;
 }
 @media (max-width: 600px) {
   main .container{

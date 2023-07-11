@@ -102,7 +102,7 @@
               <div class="m-2">
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control value"
                   placeholder="Name"
                   id="name"
                   required
@@ -111,7 +111,7 @@
               <div class="m-2">
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control value"
                   placeholder="Email address"
                   id="emailAddress"
                   required
@@ -119,13 +119,13 @@
               </div>
               <div class="m-2">
                 <textarea
-                  class="form-control"
+                  class="form-control value"
                   rows="4"
                   required
                   id="text"
                 ></textarea>
               </div>
-              <button type="submit">
+              <button type="submit" id="submitButton" class="subButton">
                 <i class="fa-regular fa-paper-plane"></i>
               </button>
             </form>
@@ -162,37 +162,52 @@
         .getElementById("form")
         .addEventListener("submit", async function (e) {
           e.preventDefault();
-          const name = document.getElementById("name").value;
-          const emailAddress = document.getElementById("emailAddress").value;
-          const text = document.getElementById("text").value;
-          const botToken = "5685011090:AAF3_iLIlZLWcdHf0qrtkHons4MfbIO0EtY";
-          const channelChatId = "-970116995";
-          const message = `Name: ${name};\n Email: ${emailAddress}; \n Massage: ${text}`;
-          try {
-            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-            const payload = {
-              chat_id: channelChatId,
-              text: message,
-            };
+          const button = document.getElementById("submitButton");
+          button.classList.remove("subButton");
+          button.classList.add("loader");
+          setTimeout(async function () {
+            const name = document.getElementById("name").value;
+            const emailAddress = document.getElementById("emailAddress").value;
+            const text = document.getElementById("text").value;
+            const botToken = "5685011090:AAF3_iLIlZLWcdHf0qrtkHons4MfbIO0EtY";
+            const channelChatId = "-970116995";
+            const message = `Name: ${name};\n Email: ${emailAddress}; \n Massage: ${text}`;
+            try {
+              const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+              const payload = {
+                chat_id: channelChatId,
+                text: message,
+              };
 
-            const response = await fetch(url, {
-              method: "POST",
-              headers: { "content-type": "application/json" },
-              body: JSON.stringify(payload),
-            });
-            console.log("Message sent successfully:", response.data);
-          } catch (error) {
-            console.error("Error sending message:", error);
-          }
-        });
+              const response = await fetch(url, {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify(payload),
+              });
 
-      document.getElementById("form"),
-        addEventListener("submit", (e) => {
-          e.preventDefault();
-          alert("Thank you! I will be in touch.");
-          document.getElementById("name").value = "";
-          document.getElementById("emailAddress").value = "";
-          document.getElementById("text").value = "";
+              if (response.ok) {
+                // Clear input values
+                document.getElementById("name").value = "";
+                document.getElementById("emailAddress").value = "";
+                document.getElementById("text").value = "";
+
+                button.classList.remove("loader");
+                button.classList.add("success");
+              } else {
+                throw new Error("Error sending message");
+              }
+            } catch (error) {
+              console.error("Error sending message:", error);
+
+              alert(
+                "An error occurred while submitting the form. Please try again later."
+              );
+              form.reset();
+              button.classList.remove("loader");
+              button.classList.remove("success");
+              button.removeAttribute("style");
+            }
+          }, 300);
         });
     </script>
   </body>
