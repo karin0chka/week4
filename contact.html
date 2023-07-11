@@ -186,15 +186,21 @@
               });
 
               if (response.ok) {
-                // Clear input values
+               
                 document.getElementById("name").value = "";
                 document.getElementById("emailAddress").value = "";
                 document.getElementById("text").value = "";
 
                 button.classList.remove("loader");
                 button.classList.add("success");
+                setTimeout(function(){
+                  button.classList.remove("success")
+                  button.classList.add("subButton")
+                },2000)
               } else {
                 throw new Error("Error sending message");
+                button.classList.remove("loader");
+                button.classList.remove("success");
               }
             } catch (error) {
               console.error("Error sending message:", error);
@@ -202,10 +208,6 @@
               alert(
                 "An error occurred while submitting the form. Please try again later."
               );
-              form.reset();
-              button.classList.remove("loader");
-              button.classList.remove("success");
-              button.removeAttribute("style");
             }
           }, 300);
         });
